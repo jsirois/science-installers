@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools"]
+backend = "setuptools.build_meta"
+
+[project]
+name = "inst-science"
+authors = [
+    {name = "John Sirois", email = "john.sirois@gmail.com"},
+]
+description = "A tool to help with installing and using science in Python projects."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+dependencies = [
+    "appdirs",
+    "filelock",
+    "httpx",
+    "tqdm"
+]
+dynamic = ["version"]
+
+[project.scripts]
+inst-science = "inst_science.shim:science"
+inst-science-util = "inst_science.util:main"
+
+[dependency-groups]
+dev = [
+    "pex",
+    "pytest",
+    "pytest-xdist",
+    "ruff",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "inst_science.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["inst_science*"]
+
+[tool.ruff]
+line-length = 100
+

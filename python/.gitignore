@@ -1,0 +1,9 @@
+# Sdist build artifacts dirs.
+/*.egg-info/
+/build/
+
+# Python bytecode.
+__pycache__/
+
+# UV outputs artifacts here.
+/dist/
