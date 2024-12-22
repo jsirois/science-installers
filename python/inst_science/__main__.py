@@ -3,6 +3,5 @@
 
 from inst_science import shim
 
-
 if __name__ == "__main__":
     shim.science()

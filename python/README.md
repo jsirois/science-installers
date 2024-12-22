@@ -15,7 +15,6 @@ bootstrapping `science` for use in Python project easier:
 Development uses [`uv`](https://docs.astral.sh/uv/getting-started/installation/). Install as you
 best see fit.
 
-With `uv` installed, running `uv run scripts/ci.py` is enough to get the tools inst-science uses
-installed and run against the codebase. This includes formatting code, running lint checks and then
-running tests.
-
+With `uv` installed, running `uv run dev-cmd` is enough to get the tools inst-science uses installed
+and run against the codebase. This includes formatting code, linting code, performing type checks
+and then running tests.

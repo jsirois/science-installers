@@ -15,6 +15,8 @@ dependencies = [
     "appdirs",
     "filelock",
     "httpx",
+    "packaging",
+    "tomlkit",
     "tqdm"
 ]
 dynamic = ["version"]
@@ -23,14 +25,6 @@ dynamic = ["version"]
 inst-science = "inst_science.shim:science"
 inst-science-util = "inst_science.util:main"
 
-[dependency-groups]
-dev = [
-    "pex",
-    "pytest",
-    "pytest-xdist",
-    "ruff",
-]
-
 [tool.setuptools.dynamic]
 version = {attr = "inst_science.__version__"}
 
@@ -38,6 +32,38 @@ version = {attr = "inst_science.__version__"}
 where = ["."]
 include = ["inst_science*"]
 
+[dependency-groups]
+dev = [
+    "dev-cmd",
+    "mypy",
+    "pytest",
+    "pytest-xdist",
+    "ruff",
+    "types-tqdm",
+]
+
 [tool.ruff]
 line-length = 100
 
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.dev-cmd.commands]
+fmt = ["ruff", "format"]
+check-fmt = ["ruff", "format", "--diff"]
+
+lint = ["ruff", "check", "--fix"]
+check-lint = ["ruff", "check"]
+
+type-check = ["mypy", "inst_science"]
+
+[tool.dev-cmd.commands.test]
+args = ["pytest", "-n", "auto"]
+accepts-extra-args = true
+
+[tool.dev-cmd.aliases]
+checks = ["fmt", "lint", "type-check", "test"]
+ci = ["check-fmt", "check-lint", "type-check", "test"]
+
+[tool.dev-cmd.default]
+alias = "checks"
