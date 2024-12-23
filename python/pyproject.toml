@@ -4,13 +4,7 @@ backend = "setuptools.build_meta"
 
 [project]
 name = "insta-science"
-authors = [
-    {name = "John Sirois", email = "john.sirois@gmail.com"},
-]
-description = "A tool to help with installing and using science in Python projects."
-readme = "README.md"
 requires-python = ">=3.9"
-license = {file = "LICENSE"}
 dependencies = [
     "ansicolors",
     "appdirs",
@@ -21,7 +15,39 @@ dependencies = [
     "tqdm",
     "typing-extensions",
 ]
+
+authors = [
+    {name = "John Sirois", email = "john.sirois@gmail.com"},
+]
+description = "A tool to help with installing and using `science` in Python projects."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["automation", "command", "runner", "testing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Utilities",
+]
+
 dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/a-scie/science-installers/tree/main/python"
+"Bug Tracker" = "https://github.com/a-scie/science-installers/issues"
+Changelog = "https://github.com/a-scie/science-installers/blob/main/python/CHANGES.md"
 
 [project.scripts]
 insta-science = "insta_science.shim:science"
