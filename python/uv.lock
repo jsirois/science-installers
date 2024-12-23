@@ -159,6 +159,7 @@ dependencies = [
     { name = "packaging" },
     { name = "tomlkit", marker = "python_full_version < '3.11'" },
     { name = "tqdm" },
+    { name = "typing-extensions" },
 ]
 
 [package.dev-dependencies]
@@ -170,7 +171,6 @@ dev = [
     { name = "ruff" },
     { name = "types-appdirs" },
     { name = "types-tqdm" },
-    { name = "typing-extensions" },
 ]
 
 [package.metadata]
@@ -182,6 +182,7 @@ requires-dist = [
     { name = "packaging" },
     { name = "tomlkit", marker = "python_full_version < '3.11'" },
     { name = "tqdm" },
+    { name = "typing-extensions" },
 ]
 
 [package.metadata.requires-dev]
@@ -193,7 +194,6 @@ dev = [
     { name = "ruff" },
     { name = "types-appdirs" },
     { name = "types-tqdm" },
-    { name = "typing-extensions" },
 ]
 
 [[package]]

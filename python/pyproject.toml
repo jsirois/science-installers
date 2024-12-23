@@ -18,7 +18,8 @@ dependencies = [
     "httpx",
     "packaging",
     "tomlkit; python_version < '3.11'",
-    "tqdm"
+    "tqdm",
+    "typing-extensions",
 ]
 dynamic = ["version"]
 
@@ -42,7 +43,6 @@ dev = [
     "ruff",
     "types-appdirs",
     "types-tqdm",
-    "typing-extensions",
 ]
 
 [[tool.mypy.overrides]]
@@ -67,7 +67,7 @@ import sys
 import colors
 
 
-# The MyPy cache can get corrupted by swithing Pythons with `uv ... --python ...` and re-building
+# The MyPy cache can get corrupted by swithing Pythons with `uv ... --python ...' and re-building
 # the .venv is cheap; so we clean these as a more restricted form than `git clean -fdx`
 for cache_dir in '.mypy_cache', '.venv':
     if os.path.exists(cache_dir):
