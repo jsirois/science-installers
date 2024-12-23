@@ -54,15 +54,15 @@ wheels = [
 
 [[package]]
 name = "dev-cmd"
-version = "0.1.1"
+version = "0.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "ansicolors" },
     { name = "tomlkit", marker = "python_full_version < '3.11'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0b/3c/6c9e1c0dbcff6dcdaa12422673c5c0cde4c42914d65dec4df800b57d5bcc/dev_cmd-0.1.1.tar.gz", hash = "sha256:29eea5dd4521171f789473f11ddf0a3dd82defa3ada2c366e137a20af6009138", size = 17023 }
+sdist = { url = "https://files.pythonhosted.org/packages/67/80/427728e4c3db12a50d87c082a70924e77b5530fa0f2a2ecee9993bfe6d14/dev_cmd-0.2.1.tar.gz", hash = "sha256:1c8f3ebf43c985b88433b36a5bcbbdcf9fe48ed2b95b05836d4f4c4aa8e3c2ec", size = 17525 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/31/bc/43b995050908da44be97e390b448257927cd2ee9ec45733084768c2f094e/dev_cmd-0.1.1-py3-none-any.whl", hash = "sha256:9f62c1508280cc768837fe5b3648c70661125b283ad4b1b6e69941e93bbf9e23", size = 16550 },
+    { url = "https://files.pythonhosted.org/packages/d2/d2/689305ed799ce6e00f4549b3afbcd56b1c6a55dc7fe78c1304d8ac84f12d/dev_cmd-0.2.1-py3-none-any.whl", hash = "sha256:8798e4600b344f4074b25d5e5a053b36dad9f2a22f56a7786c6525e2ab0f8dbf", size = 16829 },
 ]
 
 [[package]]
@@ -148,15 +148,16 @@ wheels = [
 ]
 
 [[package]]
-name = "inst-science"
+name = "insta-science"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "ansicolors" },
     { name = "appdirs" },
     { name = "filelock" },
     { name = "httpx" },
     { name = "packaging" },
-    { name = "tomlkit" },
+    { name = "tomlkit", marker = "python_full_version < '3.11'" },
     { name = "tqdm" },
 ]
 
@@ -167,16 +168,19 @@ dev = [
     { name = "pytest" },
     { name = "pytest-xdist" },
     { name = "ruff" },
+    { name = "types-appdirs" },
     { name = "types-tqdm" },
+    { name = "typing-extensions" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "ansicolors" },
     { name = "appdirs" },
     { name = "filelock" },
     { name = "httpx" },
     { name = "packaging" },
-    { name = "tomlkit" },
+    { name = "tomlkit", marker = "python_full_version < '3.11'" },
     { name = "tqdm" },
 ]
 
@@ -187,7 +191,9 @@ dev = [
     { name = "pytest" },
     { name = "pytest-xdist" },
     { name = "ruff" },
+    { name = "types-appdirs" },
     { name = "types-tqdm" },
+    { name = "typing-extensions" },
 ]
 
 [[package]]
@@ -378,6 +384,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2", size = 169737 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl", hash = "sha256:26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2", size = 78540 },
+]
+
+[[package]]
+name = "types-appdirs"
+version = "1.4.3.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fe/dc/600964f9ee98f4afdb69be74cd8e1ca566635a76ada9af0046e44a778fbb/types-appdirs-1.4.3.5.tar.gz", hash = "sha256:83268da64585361bfa291f8f506a209276212a0497bd37f0512a939b3d69ff14", size = 2866 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cf/07/41f5b9b11f11855eb67760ed680330e0ce9136a44b51c24dd52edb1c4eb1/types_appdirs-1.4.3.5-py3-none-any.whl", hash = "sha256:337c750e423c40911d389359b4edabe5bbc2cdd5cd0bd0518b71d2839646273b", size = 2667 },
 ]
 
 [[package]]

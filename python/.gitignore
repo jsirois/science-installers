@@ -1,6 +1,5 @@
-# Sdist build artifacts dirs.
+# Build artifacts dirs.
 /*.egg-info/
-/build/
 
 # Python bytecode.
 __pycache__/
