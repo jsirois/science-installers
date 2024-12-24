@@ -156,12 +156,15 @@ def main() -> Any:
     print("---")
     if (
         "y"
-        != input("Do you want to proceed with releasing the changes above? [y|N]").strip().lower()
+        != input("Do you want to proceed with releasing the changes above? [y|N] ").strip().lower()
     ):
         return colors.yellow("Aborted release at user request.")
 
+    print()
     tag_and_push_release()
+    print("---")
     print(colors.green(f"Release {__version__} tagged and pushed."))
+    print()
     print("You can view release progress by visiting the latest job here:")
     print("    https://github.com/a-scie/science-installers/actions/workflows/python-release.yml")
 
