@@ -100,7 +100,7 @@ def release_tag_exists() -> str:
 
 def tag_and_push_release() -> None:
     subprocess.run(
-        args=["git", "tag", "--sign" "-a", "-m", f"Release {__version__}", RELEASE_TAG], check=True
+        args=["git", "tag", "--sign", "-a", "-m", f"Release {__version__}", RELEASE_TAG], check=True
     )
     subprocess.run(args=["git", "push", "--tags", REMOTE, "HEAD:main"], check=True)
 
